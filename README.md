@@ -1,7 +1,7 @@
 # project-lvl1-s124
 
-[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
+[![Code Climate](https://codeclimate.com/github/user921/project-lvl1-s124/badges/gpa.svg)](https://codeclimate.com/github/user921/project-lvl1-s124)
 
-[![Test Coverage](https://codeclimate.com/github/codeclimate/codeclimate/badges/coverage.svg)](https://codeclimate.com/github/codeclimate/codeclimate/coverage)
+[![Test Coverage](https://codeclimate.com/github/user921/project-lvl1-s124/badges/coverage.svg)](https://codeclimate.com/github/user921/project-lvl1-s124/coverage)
 
-[![Issue Count](https://codeclimate.com/github/codeclimate/codeclimate/badges/issue_count.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
+[![Issue Count](https://codeclimate.com/github/user921/project-lvl1-s124/badges/issue_count.svg)](https://codeclimate.com/github/user921/project-lvl1-s124)
