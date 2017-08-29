@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import hello from '..';
+import askNameAndSayHello from '..';
 
 console.log('Welcome to the Brain Games!\n');
 
-hello();
+askNameAndSayHello();
 
