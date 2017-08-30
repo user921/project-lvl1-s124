@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { startGame } from '../..';
+import startGame from '../..';
 
 console.log('Welcome to the Brain Games!\n');
 console.log('What is the result of the expression?');
