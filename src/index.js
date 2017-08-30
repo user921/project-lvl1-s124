@@ -8,8 +8,8 @@ export const askNameAndSayHello = () => {
   return name;
 };
 
-export const generateRandomNumber = (num) => {
-  const result = Math.floor(Math.random() * num) + 1;
+export const generateRandomNumber = (lessThan) => {
+  const result = Math.floor(Math.random() * lessThan);
   return result;
 };
 

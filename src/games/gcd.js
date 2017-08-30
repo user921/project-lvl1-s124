@@ -8,8 +8,8 @@ const gcd = (a, b) => {
 };
 
 export const generateQA = () => {
-  const rand1 = generateRandomNumber(30);
-  const rand2 = generateRandomNumber(30);
+  const rand1 = generateRandomNumber(30) + 1;
+  const rand2 = generateRandomNumber(30) + 1;
   const correctAnswer = gcd(rand1, rand2);
   return [`${rand1} ${rand2}`, `${correctAnswer}`];
 };
