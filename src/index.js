@@ -1,12 +1,19 @@
 import readlineSync from 'readline-sync';
 
-const askNameAndSayHello = () => {
+const numberOfRounds = 3;
+
+export const askNameAndSayHello = () => {
   const name = readlineSync.question('\nMay I have your name? ');
   console.log(`Hello, ${name}!`);
   return name;
 };
 
-const makeEvenRound = (question, correctAnswer) => {
+export const generateRandomNumber = (lessThen) => {
+  const result = Math.floor(Math.random() * lessThen);
+  return result;
+};
+
+const playRound = (question, correctAnswer) => {
   console.log(`\nQuestion: ${question}`);
   const answer = readlineSync.question('Your answer: ').toLowerCase();
 
@@ -18,12 +25,16 @@ const makeEvenRound = (question, correctAnswer) => {
   return true;
 };
 
-const startGame = (numberOfRounds, generateQA) => {
+export const startGame = (generateQA) => {
+  const [quest, question, correctAnswer] = generateQA();
+
+  console.log('Welcome to the Brain Games!');
+  console.log(quest);
+
   const name = askNameAndSayHello();
 
   for (let i = 1; i <= numberOfRounds; i += 1) {
-    const [question, correctAnswer] = generateQA();
-    if (!makeEvenRound(question, correctAnswer)) {
+    if (!playRound(question, correctAnswer)) {
       console.log(`\nLet's try again, ${name}!`);
       break;
     }
@@ -32,5 +43,3 @@ const startGame = (numberOfRounds, generateQA) => {
     }
   }
 };
-
-export default startGame;
