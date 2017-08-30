@@ -7,7 +7,6 @@ export const askNameAndSayHello = () => {
 };
 
 export const makeEvenRound = (question, correctAnswer) => {
-
   console.log(`\nQuestion: ${question}`);
   const answer = readlineSync.question('Your answer: ').toLowerCase();
 
