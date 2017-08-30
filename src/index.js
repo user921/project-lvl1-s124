@@ -14,7 +14,7 @@ export const makeEvenRound = () => {
   const answer = readlineSync.question('Your answer: ').toLowerCase();
 
   if (answer !== correctAnswer) {
-    console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, Bill!`);
+    console.log(`\n'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     return false;
   }
   console.log('Correct!');
