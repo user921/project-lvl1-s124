@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { startGame } from '..';
-import { quest, generateQA } from '../games/calc';
+import calcGame from '../games/calc';
 
-startGame(quest, generateQA);
+calcGame();

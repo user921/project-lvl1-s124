@@ -1,10 +1,9 @@
-#!/usr/bin/env node
+import { startGame } from '..';
+import generateRandomNumber from './utils';
 
-import { generateRandomNumber } from '..';
+const quest = 'What is the result of the expression?';
 
-export const quest = 'What is the result of the expression?';
-
-export const generateQA = () => {
+const generateQA = () => {
   const rand1 = generateRandomNumber(100);
   const rand2 = generateRandomNumber(100);
   const sign = ['+', '-', '*'][generateRandomNumber(3)];
@@ -23,4 +22,8 @@ export const generateQA = () => {
       break;
   }
   return [`${rand1} ${sign} ${rand2}`, `${correctAnswer}`];
+};
+
+export default () => {
+  startGame(quest, generateQA);
 };
