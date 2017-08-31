@@ -48,7 +48,10 @@ export const createArrayOfNumbers = (num, length) => {
   return result;
 };
 
-export const sumOfNumberArray = array => array.reduce((sum, num) => sum + num, 0);
+export const sumOfNumberArray = (array) => {
+  const result = array.reduce((sum, num) => sum + num, 0);
+  return result;
+};
 
 // iterate over arrays in a specific way to find array sum of its elements equal to rightSum
 // a = 1, b = 6 => [1, 1, 1, 2] => [1, 1, 2, 2] => [1, 2, 2, 2]
