@@ -42,3 +42,25 @@ export const startGame = (quest, generateQA) => {
     }
   }
 };
+
+export const createArrayOfNumbers = (num, length) => {
+  const result = new Array(length + 1).join(num).split('').map(str => Number(str));
+  return result;
+};
+
+export const sumOfNumberArray = array => array.reduce((sum, num) => sum + num, 0);
+
+// iterate over arrays in a specific way to find array sum of its elements equal to rightSum
+// a = 1, b = 6 => [1, 1, 1, 2] => [1, 1, 2, 2] => [1, 2, 2, 2]
+export const findArray = (a, b, length, rightSum) => {
+  for (let i = 1; i < length; i += 1) {
+    const aArray = createArrayOfNumbers(a, length - i);
+    const bArray = createArrayOfNumbers(b, i);
+    const abArray = aArray.concat(bArray);
+    const abArraySum = sumOfNumberArray(abArray);
+    if (abArraySum === rightSum) {
+      return abArray;
+    }
+  }
+  throw new Error('Error: findArray is broken');
+};
