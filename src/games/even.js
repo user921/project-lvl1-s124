@@ -1,5 +1,5 @@
 import { startGame } from '..';
-import generateRandomNumber from './utils';
+import generateRandomNumber from './generateRandomNumber';
 
 const quest = 'Answer "yes" if number even otherwise answer "no".';
 

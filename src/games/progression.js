@@ -1,5 +1,5 @@
 import { startGame } from '..';
-import generateRandomNumber from './utils';
+import generateRandomNumber from './generateRandomNumber';
 
 const quest = 'What number is missing in this progression?';
 
