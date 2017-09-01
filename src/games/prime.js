@@ -17,7 +17,7 @@ const isPrime = (num) => {
 };
 
 const generateQuestion = () => {
-  const question = String(generateRandomNumber(30) + 1);
+  const question = String(generateRandomNumber(30) + 2);
   return question;
 };
 
