@@ -8,11 +8,23 @@ const gcd = (a, b) => {
   return result;
 };
 
-const generateQA = () => {
+const generateQuestion = () => {
   const rand1 = generateRandomNumber(30) + 1;
   const rand2 = generateRandomNumber(30) + 1;
-  const correctAnswer = gcd(rand1, rand2);
-  return [`${rand1} ${rand2}`, `${correctAnswer}`];
+  const question = `${rand1} ${rand2}`;
+  return question;
+};
+
+const generateAnswer = (question) => {
+  const [rand1, rand2] = question.split(' ').map(Number);
+  const answer = gcd(rand1, rand2).toString();
+  return answer;
+};
+
+const generateQA = () => {
+  const question = generateQuestion();
+  const answer = generateAnswer(question);
+  return [question, answer];
 };
 
 export default () => {

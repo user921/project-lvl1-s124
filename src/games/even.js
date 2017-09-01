@@ -3,10 +3,20 @@ import generateRandomNumber from './utils';
 
 const quest = 'Answer "yes" if number even otherwise answer "no".';
 
+const generateQuestion = () => {
+  const question = String(generateRandomNumber(1000) + 1);
+  return question;
+};
+
+const generateAnswer = (question) => {
+  const answer = question % 2 === 0 ? 'yes' : 'no';
+  return answer;
+};
+
 const generateQA = () => {
-  const randomNumber = generateRandomNumber(1000) + 1;
-  const correctAnswer = randomNumber % 2 === 0 ? 'yes' : 'no';
-  return [`${randomNumber}`, correctAnswer];
+  const question = generateQuestion();
+  const answer = generateAnswer(question);
+  return [question, answer];
 };
 
 export default () => {

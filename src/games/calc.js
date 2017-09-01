@@ -3,25 +3,37 @@ import generateRandomNumber from './utils';
 
 const quest = 'What is the result of the expression?';
 
-const generateQA = () => {
+const generateQuestion = () => {
   const rand1 = generateRandomNumber(100);
   const rand2 = generateRandomNumber(100);
   const sign = ['+', '-', '*'][generateRandomNumber(3)];
-  let correctAnswer;
+  const question = `${rand1} ${sign} ${rand2}`;
+  return question;
+};
+
+const generateAnswer = (question) => {
+  const [rand1, sign, rand2] = question.split(' ');
+  let answer;
   switch (sign) {
     case '+':
-      correctAnswer = rand1 + rand2;
+      answer = String(Number(rand1) + Number(rand2));
       break;
     case '-':
-      correctAnswer = rand1 - rand2;
+      answer = String(rand1 - rand2);
       break;
     case '*':
-      correctAnswer = rand1 * rand2;
+      answer = String(rand1 * rand2);
       break;
     default:
-      break;
+      throw new Error('Error: generateAnswer is broken!');
   }
-  return [`${rand1} ${sign} ${rand2}`, `${correctAnswer}`];
+  return answer;
+};
+
+const generateQA = () => {
+  const question = generateQuestion();
+  const answer = generateAnswer(question);
+  return [question, answer];
 };
 
 export default () => {

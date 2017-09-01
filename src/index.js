@@ -26,14 +26,20 @@ export const startGame = (quest, generateQA) => {
 
   const name = askNameAndSayHello();
 
-  for (let i = 1; i <= numberOfRounds; i += 1) {
-    const [question, correctAnswer] = generateQA();
-    if (!playRound(question, correctAnswer)) {
-      console.log(`\nLet's try again, ${name}!`);
-      break;
+  const iter = (i) => {
+    if (i === 0) {
+      return;
     }
-    if (i === numberOfRounds) {
+    const [question, answer] = generateQA();
+    if (!playRound(question, answer)) {
+      console.log(`\nLet's try again, ${name}!`);
+      return;
+    }
+    if (i === 1) {
       console.log(`\nCongratulations, ${name}!`);
     }
-  }
+    iter(i - 1);
+  };
+
+  iter(numberOfRounds);
 };
