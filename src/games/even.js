@@ -1,10 +1,10 @@
 import { startGame } from '..';
-import generateRandomNumber from './randomNumberGenerator';
+import generateRandomInt from './randomNumberGenerator';
 
 const quest = 'Answer "yes" if number even otherwise answer "no".';
 
 const generateQuestion = () => {
-  const question = String(generateRandomNumber(1000) + 1);
+  const question = String(generateRandomInt(1, 1000));
   return question;
 };
 

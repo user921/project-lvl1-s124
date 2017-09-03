@@ -1,5 +1,5 @@
 import { startGame } from '..';
-import generateRandomNumber from './randomNumberGenerator';
+import generateRandomInt from './randomNumberGenerator';
 
 const quest = 'Answer "yes" if number prime otherwise answer "no".';
 
@@ -17,7 +17,7 @@ const isPrime = (num) => {
 };
 
 const generateQuestion = () => {
-  const question = String(generateRandomNumber(30) + 2);
+  const question = String(generateRandomInt(2, 30));
   return question;
 };
 

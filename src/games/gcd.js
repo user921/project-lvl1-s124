@@ -1,5 +1,5 @@
 import { startGame } from '..';
-import generateRandomNumber from './randomNumberGenerator';
+import generateRandomInt from './randomNumberGenerator';
 
 const quest = 'Find the greatest common divisor of given numbers.';
 
@@ -9,8 +9,8 @@ const gcd = (a, b) => {
 };
 
 const generateQuestion = () => {
-  const rand1 = generateRandomNumber(30) + 1;
-  const rand2 = generateRandomNumber(30) + 1;
+  const rand1 = generateRandomInt(1, 30);
+  const rand2 = generateRandomInt(1, 30);
   const question = `${rand1} ${rand2}`;
   return question;
 };
